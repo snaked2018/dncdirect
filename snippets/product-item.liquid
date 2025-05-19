@@ -48,14 +48,30 @@
     {%- assign primary_media = product.featured_media -%}
 
     <a href="{{ product.url }}" class="product-item__image-wrapper {% if show_secondary_media %}product-item__image-wrapper--with-secondary{% endif %}">
-      <div class="aspect-ratio {% if settings.product_image_size != 'natural' %}aspect-ratio--{{ settings.product_image_size }}{% endif %}" style="padding-bottom: {{ 100.0 | divided_by: primary_media.preview_image.aspect_ratio }}%">
-        {{- primary_media | image_url: width: primary_media.width | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 100vw, 600px', widths: '200,300,400,600,800,1000,1200,1400,1600', data-media-id: primary_media.id, class: 'product-item__primary-image' -}}
-
-        {%- if show_secondary_media -%}
-          {{- product.media[1] | image_url: width: product.media[1].width | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 100vw, 600px', widths: '200,300,400,600,800,1000,1200,1400,1600', class: 'product-item__secondary-image' -}}
+      {%- assign first_available_variant = nil -%}
+      {%- for variant in product.variants -%}
+        {%- if variant.available and first_available_variant == nil -%}
+          {%- assign first_available_variant = variant -%}
         {%- endif -%}
-      </div>
-    </a>
+      {%- endfor -%}
+
+      {%- assign display_media = primary_media -%}
+      {%- if first_available_variant.featured_media -%}
+        {%- assign display_media = first_available_variant.featured_media -%}
+      {%- endif -%}
+
+        <div class="aspect-ratio {% if settings.product_image_size != 'natural' %}aspect-ratio--{{ settings.product_image_size }}{% endif %}" style="padding-bottom: {{ 100.0 | divided_by: display_media.preview_image.aspect_ratio }}%">
+          {{- display_media | image_url: width: display_media.width | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 100vw, 600px', widths: '200,300,400,600,800,1000,1200,1400,1600', data-media-id: display_media.id, class: 'product-item__primary-image' -}}
+  
+          {%- if show_secondary_media -%}
+            {%- assign secondary_media = product.media[1] -%}
+            {%- if first_available_variant.media[1] -%}
+          {%- assign secondary_media = first_available_variant.media[1] -%}
+            {%- endif -%}
+            {{- secondary_media | image_url: width: secondary_media.width | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 100vw, 600px', widths: '200,300,400,600,800,1000,1200,1400,1600', class: 'product-item__secondary-image' -}}
+          {%- endif -%}
+        </div>
+      </a>
   {%- endif -%}
 
   <div class="product-item__info">
