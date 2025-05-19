@@ -1,0 +1,190 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_collection_image": true,
+        "collapse_collection_description": true,
+        "collection_image_size": "small",
+        "products_per_row": "4",
+        "default_products_per_page": 24,
+        "default_view_layout": "grid",
+        "show_quick_buy": "list_grid",
+        "show_quick_view": "list_grid",
+        "quick_links": "",
+        "quick_links_show_products_count": true,
+        "show_filters": true,
+        "show_filter_color_swatch": true,
+        "open_group_filters_mode": "all_closed"
+      }
+    },
+    "rich_text_D3YN9k": {
+      "type": "rich-text",
+      "disabled": true,
+      "custom_css": [
+        ".container.container--narrow {max-width: 1480px; text-align: justify; font-size: 16px;}",
+        "h3 {font-size: 18px !important;}"
+      ],
+      "settings": {
+        "text_width": "narrow",
+        "title": "",
+        "content": "<h3><strong>Why Choose Our Men's Workwear Collection?</strong></h3><p>At WorkStitch, we understand that quality workwear is essential for both safety and performance. Our Men's Workwear Collection is crafted from the finest materials, offering garments that not only meet industry standards but also exceed your expectations in comfort and durability.</p><p><strong>Superior Durability:</strong> Our workwear is made from high-quality fabrics that are designed to withstand the rigours of daily use, ensuring long-lasting wear and tear resistance.</p><p><strong>Comfort-Driven Design:</strong> With ergonomic fits and breathable materials, our garments are designed to keep you comfortable, even during long shifts.</p><p><strong>Functional Features:</strong> Practicality is at the forefront of our designs. Our workwear includes features like multiple pockets, reinforced stitching, and adjustable components, ensuring you have everything you need at hand.</p><p><strong>Versatile Styles:</strong> Our collection includes a variety of options, from tough work pants and shirts to protective outerwear, ensuring you’re equipped for any task or weather condition.</p><h3><strong>Features and Benefits</strong></h3><p><strong>High-Quality Fabrics:</strong> Crafted from durable materials such as cotton drill, polyester blends, and flame-resistant fabrics, our men’s workwear provides the protection you need without compromising on comfort.</p><p><strong>Reinforced Seams:</strong> For added durability, our garments feature reinforced stitching in high-stress areas, ensuring they stand up to the demands of your job.</p><p><strong>Breathable and Comfortable:</strong> Stay cool and dry with our breathable fabrics, designed to wick away moisture and allow for air circulation, even in warm conditions.</p><p><strong>Adjustable Fit:</strong> Many of our garments feature adjustable waistbands, cuffs, and straps, allowing you to customise the fit for maximum comfort and safety.</p><p><strong>Comprehensive Range:</strong> From work shirts and trousers to jackets and overalls, our collection covers all your workwear needs, providing full-body protection and comfort.</p><h3><strong>Frequently Asked Questions (FAQs)</strong></h3><p><br/> Our men’s workwear is made from a variety of high-quality materials, including cotton drill, polyester blends, and flame-resistant fabrics, each chosen for their durability and protective qualities.<br/></p><p><br/> Yes, our workwear is designed to meet the demands of industrial environments, offering protection against dirt, spills, and other workplace hazards.<br/></p><p><br/> Our workwear is machine washable and designed to retain its shape and colour after multiple washes. For best results, follow the care instructions on the garment label.<br/></p><p><br/> Yes, we offer a range of flame-resistant workwear, providing additional protection for those working in high-risk environments.<br/></p><p><br/> Our collection is available in a wide range of sizes to ensure a comfortable and secure fit for all body types. Please refer to our size guide for detailed measurements.<br/></p>",
+        "button_text": "",
+        "button_link": "shopify://collections/all"
+      }
+    },
+    "custom_html_ntYNEX": {
+      "type": "custom-html",
+      "settings": {
+        "title": "Why Choose Our Women's Workwear?",
+        "html": "<p>At WorkStitch, we understand that women’s workwear needs to be as resilient and reliable as the women who wear it. Our collection is meticulously crafted to provide the perfect balance of toughness and comfort, ensuring that you can tackle your workday with confidence.</p>\n\n<p><strong>Tailored Fit:</strong> Each piece in our collection is designed to offer a flattering fit that doesn’t compromise on comfort or mobility, ensuring you look and feel great on the job.</p>\n\n<p><strong>\nDurable Materials:</strong> Built to withstand the demands of any work environment, our garments are made from high-quality materials that resist wear and tear, ensuring long-lasting use.</p>\n\n<span id=\"dots\">...</span><span id=\"more\">\n\n<p><strong>Comfortable Design:</strong> With features like breathable fabrics and ergonomic cuts, our workwear is designed to keep you comfortable, even during the longest shifts.</p>\n\n<p><strong>Professional Style:</strong> Our collection combines practical features with a stylish design, allowing you to maintain a professional appearance without sacrificing functionality..</p>\n\n<p><strong>Versatile Options:</strong> From rugged work pants to breathable shirts and jackets, our women’s collection has something for every job and every season.\n\n</p>\n<p><strong>High-Quality Fabrics:</strong> Our women’s workwear is crafted from premium fabrics like cotton drill and polyester blends, offering durability and comfort in every piece.</p>\n<p><strong>Reinforced Seams:</strong> We’ve added reinforced stitching in high-stress areas to ensure your garments last, no matter how tough the job.</p>\n<p><strong>Breathable Materials:</strong> Stay cool and dry with our breathable fabrics, designed to wick away moisture and keep you comfortable all day.</p>\n<p><strong>Functional Pockets:</strong> Ample storage with multiple pockets designed to keep your tools and essentials close at hand, ensuring efficiency on the job.</p>\n<p><strong>UV Protection:</strong> Some items in our collection include built-in UV protection, perfect for those long days working outdoors.</p>\n\n<p><strong>Frequently Asked Questions (FAQs)</strong></p>\n\n<p><strong>What sizes are available in your Women's Workwear Collection?</strong> Our collection is available in a wide range of sizes, designed to provide a comfortable and tailored fit for all body types. Please refer to our size guide for detailed measurements.</p>\n\n<p><strong>Is your workwear suitable for different weather conditions?</strong> Yes, our women’s workwear is designed to be versatile, with options for both warm and cool weather. We offer breathable fabrics for hot days and insulated options for colder conditions.</p>\n\n<p><strong>How do I care for my workwear?</strong> Most of our workwear is machine washable and designed to retain its shape and colour after multiple washes. Follow the care instructions on the label for best results.</p>\n\n<p><strong>Do you offer workwear with added safety features?</strong> Yes, some of our garments come with additional safety features like reflective strips and reinforced knee patches for added protectio nwon the job.</p>\n\n</span><p></p>\n\n<button onclick=\"myFunction()\" id=\"myBtn\">Read more</button>\n\n\n\n\n<style>\n#more {display: none;}\n</style>\n\n\n<script>\nfunction myFunction() {\n  var dots = document.getElementById(\"dots\");\n  var moreText = document.getElementById(\"more\");\n  var btnText = document.getElementById(\"myBtn\");\n\n  if (dots.style.display === \"none\") {\n    dots.style.display = \"inline\";\n    btnText.innerHTML = \"Read more\"; \n    moreText.style.display = \"none\";\n  } else {\n    dots.style.display = \"none\";\n    btnText.innerHTML = \"Read less\"; \n    moreText.style.display = \"inline\";\n  }\n}\n</script>"
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed",
+        "show_quick_buy": false
+      }
+    },
+    "faq_WifEt8": {
+      "type": "faq",
+      "blocks": {
+        "separator_9XJfdc": {
+          "type": "separator",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "question_Axq8pB": {
+          "type": "question",
+          "settings": {
+            "title": "Can I get my product personalized?",
+            "answer": "<p>Yes, we offer garment decoration and personalisation services, including embroidery and screen printing, to add your company logo or name to your workwear.</p><p>This is perfect for creating a professional and unified look for your team. For further details, you may click this <a href=\"https://workstitch.com.au/pages/embroidery-and-digital-printing\" target=\"_blank\" title=\"Embroidery and Digital Printing\">link</a>.</p>"
+          }
+        },
+        "question_6HKaeK": {
+          "type": "question",
+          "settings": {
+            "title": "What types of workwear does Work Stitch offer?",
+            "answer": "<p>At Work Stitch, we offer a diverse range of high-quality workwear, including Hi-Vis jackets, stretch cargo pants, flame-retardant clothing, and durable work boots from top brands like Bisley, designed to meet the demands of the Australian workforce.</p>"
+          }
+        },
+        "question_ftNpCr": {
+          "type": "question",
+          "settings": {
+            "title": "What makes Bisley workwear unique?",
+            "answer": "<p>Bisley workwear is renowned for its durability, comfort, and compliance with Australian safety standards. Their products are designed to withstand the toughest conditions, making them a preferred choice for many Australian workers.</p>"
+          }
+        },
+        "question_YqJYtW": {
+          "type": "question",
+          "settings": {
+            "title": "How do I determine the right size for my workwear?",
+            "answer": "<p>Each product page includes a detailed sizing chart to help you choose the perfect fit. Measure yourself and compare your measurements with our size guide for the best results.</p>"
+          }
+        },
+        "question_MBVFGn": {
+          "type": "question",
+          "settings": {
+            "title": "Can I return my product?",
+            "answer": "<p>We understand things don't always go to plan...We suggest you try on the items as soon as you receive them (without taking the tags off!).</p><p>Our returns policy is fair in that if you don't want an item because you've changed your mind or you ordered a few sizes to try on (we've all done it...) then all we will do is deduct the cost of the return shipping label from your refund. </p><p>Please visit our <a href=\"https://workstitch.loopreturns.com/\" target=\"_blank\" title=\"Loop Returns\">Returns Portal</a>.</p><p>Please make sure your return is in the original packaging, unworn and with the swing tags attached. If it is not then we will not be able to accept your return.</p><p>All Returns incur a 5% handling fee, exchanges and store credit do not incur any fees.</p><p>To read our Exchange & Return policy please follow this link:</p><p><a href=\"https://workstitch.com.au/policies/refund-policy\" target=\"_blank\">https://workstitch.com.au/policies/refund-policy</a> </p>"
+          }
+        },
+        "separator_EYFdqf": {
+          "type": "separator",
+          "settings": {
+            "title": "Shipping and Delivery"
+          }
+        },
+        "question_xfmcwJ": {
+          "type": "question",
+          "settings": {
+            "title": "How long does delivery take within Australia?",
+            "answer": "<p>Delivery times vary by location, but typically, it takes 3-7 business days for standard delivery within Australia. We also offer express shipping options for faster delivery.</p>"
+          }
+        },
+        "question_GgHAat": {
+          "type": "question",
+          "settings": {
+            "title": "How long will it take to get my order?",
+            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+          }
+        },
+        "question_QXQwzm": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship overseas?",
+            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout.</p>"
+          }
+        },
+        "question_QNqptK": {
+          "type": "question",
+          "settings": {
+            "title": "Do you offer free shipping?",
+            "answer": "<p>Yes, we provide free shipping on orders over $199 within Australia. For orders below this amount, standard shipping rates apply.</p>"
+          }
+        },
+        "question_wwYFcp": {
+          "type": "question",
+          "settings": {
+            "title": "Can I track my order?",
+            "answer": "<p>Yes, once your order is dispatched, you will receive a tracking number via email to monitor the progress of your delivery.</p>"
+          }
+        },
+        "question_agthB9": {
+          "type": "question",
+          "settings": {
+            "title": "What should I do if my order hasn’t arrived?",
+            "answer": "<p>If your order hasn't arrived within the estimated delivery time, please contact our customer service team. We will help track your order and resolve any issues promptly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "separator_9XJfdc",
+        "question_Axq8pB",
+        "question_6HKaeK",
+        "question_ftNpCr",
+        "question_YqJYtW",
+        "question_MBVFGn",
+        "separator_EYFdqf",
+        "question_xfmcwJ",
+        "question_GgHAat",
+        "question_QXQwzm",
+        "question_QNqptK",
+        "question_wwYFcp",
+        "question_agthB9"
+      ],
+      "custom_css": [
+        ".container.container--flush.container--narrow {max-width: 1480px;}"
+      ],
+      "settings": {
+        "show_contact_info": true,
+        "contact_info_heading": "Any question?",
+        "contact_info_text": "<p>If we still haven't answered your question, you can contact us below and we will get back to you as soon as possible.</p>",
+        "contact_1_icon": "bi-phone",
+        "contact_1_heading": "Customer support",
+        "contact_1_text": "<p>Enter your text here</p>",
+        "contact_2_icon": "bi-email",
+        "contact_2_heading": "Send a message",
+        "contact_2_text": "<p>Enter your text here</p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_D3YN9k",
+    "custom_html_ntYNEX",
+    "recently-viewed-products",
+    "faq_WifEt8"
+  ]
+}

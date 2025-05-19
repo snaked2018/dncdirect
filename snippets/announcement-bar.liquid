@@ -1,0 +1,142 @@
+{%- if section.settings.announcement_text != blank -%}
+  <div
+    id="announcementBar"
+    class="is-visible announcement{% if section.settings.announcement_closable %} announcement--closeable announcement--closed{% endif %}"
+    style="background-color: {{ section.settings.background_select }};">
+    {%- if section.settings.announcement_link != blank -%}
+      <a href="{{ section.settings.announcement_link }}" class="announcement__link">
+    {%- endif -%}
+
+    <span class="announcement__text{% unless sections.settings.announcement_closable %} announcement__text--open{% endunless %}" data-text="{{ section.settings.announcement_text | strip_html | handle }}">
+      <div class="marquee">
+        <div class="marquee__inner">
+          {% for i in (1..15) %}
+            <span style="color: {{ section.settings.color_select }};">{{ section.settings.announcement_text | strip_html }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </span>
+    {% comment %} <div><span>{{ section.settings.announcement_text }}</span></div> {% endcomment %}
+
+    {%- if section.settings.announcement_link != blank -%}
+      </a>
+    {%- endif -%}
+
+    {%- if section.settings.announcement_closable -%}
+      <button type="button" class="text-link announcement__close">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          role="presentation"
+          class="icon icon-close"
+          viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74" /></svg>
+        <span class="icon__fallback-text">{{ 'general.accessibility.close' | t | json }}</span>
+      </button>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+<style>
+  .marquee {
+    overflow: hidden;
+    position: relative;
+    padding: 0 40px;
+    /* Adjust padding as needed */
+  }
+
+  .marquee__inner {
+    display: flex;
+    width: 100%;
+    animation: marquee 20s linear infinite;
+  }
+
+  @media(max-width: 768px) {
+    .marquee__inner {
+      animation: marquee 10s linear infinite;
+    }
+  }
+
+  .marquee__inner span {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding-right: 50px;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .announcement--closed {
+    max-height: 0 !important;
+  }
+  .announcement__text {
+    padding: 12px 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    transition: opacity 0.75s ease;
+    text-align: center
+  }
+
+  .announcement--closed .announcement__text {
+    opacity: 0
+  }
+
+  .announcement__link {
+    display: block;
+    color: {{ settings.color_announcement_text | default: "#ffffff" }};
+    color: var(--colorAnnouncementText)
+  }
+
+  .announcement__link:hover {
+    color: {{ settings.color_announcement_text | default: "#ffffff" }};
+    color: var(--colorAnnouncementText);
+  }
+
+  .announcement__close {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    transition: opacity 1s ease 0.8s;
+    cursor: pointer;
+    z-index: 2
+  }
+
+  .announcement--closed .announcement__close {
+    opacity: 0
+  }
+
+  .announcement__close .icon {
+    color: {{ settings.color_announcement_text | default: "#ffffff" }};
+    color: var(--colorAnnouncementText);
+    width: 20px;
+    height: 20px;
+    vertical-align: middle
+  }
+
+  #announcementBar {
+    display: none;
+  }
+
+  #announcementBar.is-visible {
+    display: block;
+  }
+
+  @media only screen and (min-width: 590px) {
+
+    .announcement__close .icon {
+      width: 22px;
+      height: 22px;
+      background-color: #1c1d1d;
+    }
+  }
+</style>

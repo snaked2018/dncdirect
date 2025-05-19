@@ -1,0 +1,103 @@
+{%- if customer -%}
+  <script>
+    window.location.href = '/';
+  </script>
+{%- endif -%}
+
+{{ "account_register.css" | asset_url | stylesheet_tag }}
+
+{% form 'create_customer' %}
+  <div class="register-container">
+    <div class="register-wrapper">
+      <div class="register-header">
+        <h1>Sign up</h1>
+        <p>Create an account and get 10% off your first DNC Direct purchase.</p>
+      </div>
+
+      {{ form.errors | default_errors }}
+      <div id="tos-error" style="display: none;">
+        Please agree to the Terms of Use.
+      </div>
+
+      {% comment %}
+        <input type="hidden" name="checkout_url" value="/collections/all" class="js-redirect"/>
+        <input type="hidden" name="return_to" value="/account"/> 
+      {% endcomment %}
+
+      <p class="label-set">{{ 'customer.register.first_name' | t }}</p> 
+      <div class="form-element js-form-field">
+        <input type="text"
+          name="customer[first_name]"
+          id="FirstName"
+          autofocus
+          required
+          {% if form.first_name %}value="{{ form.first_name }}"{% endif %}>
+      </div>
+
+      <p class="label-set">{{ 'customer.register.last_name' | t }}</p> 
+      <div class="form-element js-form-field">
+        <input type="text"
+          name="customer[last_name]"
+          id="LastName"
+          required
+          {% if form.last_name %}value="{{ form.last_name }}"{% endif %}>
+      </div>
+
+      <p class="label-set">{{ 'customer.register.email' | t }}</p> 
+      <div class="form-element js-form-field">
+        <input type="email"
+          name="customer[email]"
+          id="Email"
+          class="{% if form.errors contains 'email' %}input-error{% endif %}"
+          {% if form.email %}value="{{ form.email }}"{% endif %}
+          spellcheck="false"
+          autocomplete="off"
+          autocapitalize="off"
+          required>
+      </div>
+
+      <p class="label-set">{{ 'customer.register.password' | t }}</p> 
+      <div class="form-element js-form-field">
+        <input type="password"
+          name="customer[password]"
+          id="CreatePassword"
+          class="{% if form.errors contains 'password' %}input-error{% endif %}"
+          required>
+        {% render 'fa-eye' %}
+      </div>
+
+      <!-- <div class="ten-off-wrapper">
+        <input type="checkbox" name="customer[accepts_marketing]" id="AcceptsMarketing">
+        <label for="AcceptsMarketing">I want 10% off my first purchase</label>
+      </div> -->
+
+      <div class="tos-wrapper">
+        <input type="checkbox" name="customer[accepts_tos]" id="AcceptsMarketing" class="tos-accept" required>
+        <label for="accept-tos" class="accept-tos">
+          I have read and understood the 
+          <a class="text-highlight-link" href="/pages/web-inquiries">Terms of Use</a>, and I agree.
+        </label>
+      </div>
+
+      <p>
+        <input id="submit" type="submit" value="{{ 'customer.register.submit' | t }}" class="btn btn--lightbrown js-account-submit">
+      </p>
+    </div>
+  </div>
+{% endform %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var submitButton = document.getElementById('submit');
+  var tosCheckbox = document.querySelector('.tos-accept');
+  var tosError = document.getElementById('tos-error');
+
+  submitButton.addEventListener('click', function(event) {
+    if (!tosCheckbox.checked) {
+      event.preventDefault();
+      tosError.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+});
+</script>

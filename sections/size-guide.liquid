@@ -1,0 +1,333 @@
+<style>
+  .tab-menu ul li a{
+    cursor: pointer;
+  }
+</style>
+<div class="tab-container page-width">
+<div class="tab-menu">
+      <ul>
+         <li><a class="tab-a active-a tab-is-active" data-id="tab1">{{ section.settings.tab1_heading }}</a></li>
+         <li><a class="tab-a" data-id="tab2">{{ section.settings.tab2_heading }}</a></li>
+         <li><a class="tab-a" data-id="tab3">{{ section.settings.tab3_heading }}</a></li>
+         <li><a class="tab-a" data-id="tab4">{{ section.settings.tab4_heading }}</a></li>
+      </ul>
+   </div><!--end of tab-menu-->
+
+  
+  <div  class="tab tab-active" data-id="tab1">
+     <div class="tabbing-content">
+       <div style="text-align:center">
+         <img src="{{ 'dncdirect-1698723865957.png' | file_img_url: '2048x2048' }}" />
+         <img src="{{ 'size-chart-01.png' | file_img_url: '2048x2048' }}" />
+         <img src="{{ 'size-chart-02.png' | file_img_url: '2048x2048' }}" />
+         <img src="{{ 'size-chart-03.png' | file_img_url: '2048x2048' }}" />
+       </div>
+     </div>
+         
+   </div><!--end of tab one--> 
+
+   <div  class="tab" data-id="tab2">
+          <div class="tabbing-content">
+      		<div style="text-align:center">
+              <img src="{{ 'dncdirect-1698723865957.png' | file_img_url: '2048x2048' }}" />
+              <img src="{{ 'w-size-chart-01.png' | file_img_url: '2048x2048' }}" />
+              <img src="{{ 'w-size-chart-02.png' | file_img_url: '2048x2048' }}" />
+              <img src="{{ 'w-size-chart-03.png' | file_img_url: '2048x2048' }}" />
+            </div>
+     	  </div>
+   </div>
+  
+  
+   <div  class="tab" data-id="tab3">
+          <div class="tabbing-content">
+      		 <div class="tabbing-content">
+        		<div style="text-align:center">
+                  <img src="{{ 'dncdirect-1698723865957.png' | file_img_url: '2048x2048' }}" />
+                  <img src="{{ 'k-size-chart-01.png' | file_img_url: '2048x2048' }}" />
+                  <img src="{{ 'k-size-chart-02.png' | file_img_url: '2048x2048' }}" />
+                  <img src="{{ 'k-size-chart-03.png' | file_img_url: '2048x2048' }}" />
+                </div>
+         	  </div>
+     	  </div>
+   </div>
+  
+  
+   <div  class="tab" data-id="tab4">
+          <div class="tabbing-content">
+      			
+            	 <div class="cust-img">
+              {% if section.settings.image4 != blank %}
+                {%- assign img_url = section.settings.image4 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <div  class="img-sec" data-image-loading-animation>
+                  <img id="{{ img_id }}"
+                       class="custom__image lazyload js"
+                       data-src="{{ img_url }}"
+                       data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                       data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                       data-sizes="auto"
+                       alt="{{ section.settings.image.alt | escape }}">
+                </div>
+                <noscript>
+                  {% capture image_size %}{{ max_height }}x{% endcapture %}
+                  {{ section.settings.image | img_url: image_size, scale: 2, crop: 'top' | img_tag: block.settings.image.alt, 'custom__image' }}
+                </noscript>
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+              {% if section.settings.text-over != blank %}
+                <div class="text-over">
+                  <div class="text-over-inner">
+                  	{{ section.settings.text-over }}
+                  </div>
+                </div>
+              {% endif %}
+      		</div>
+            
+              <div class="size-guide-img-text">
+                	
+                <div class="container">
+                  <div class="size-info-text">
+                    <div class="main-heading">
+                    	<h2>{{ section.settings.heading1 }}</h2>
+                    </div>
+              
+                    <div class="main-content">
+                      <div class="size-guide-content">
+                        <h3>{{ section.settings.heading2 }}</h3>
+                      </div>
+                      
+                       <div class="size-guide-content">
+                        <h3>{{ section.settings.heading3 }}</h3>
+                      </div>
+                      
+                       <div class="size-guide-content">
+                        <h3>{{ section.settings.heading4 }}</h3>
+                      </div>
+                      
+                       <div class="size-guide-content">
+                        <h3>{{ section.settings.heading5 }}</h3>
+                      </div>
+                      
+                      <div class="size-guide-content">
+                        <h3>{{ section.settings.heading6 }}</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+   </div>
+  <!--end of tab two-->
+<style>
+  .tab-container{
+	border-radius: 4px;
+    padding: 40px 15px 55px;
+}
+.tab-menu {
+    margin-bottom: 30px;
+  	width: 100%;
+    padding: 10px 20px 10px 0;
+    background-color: transparent;
+    text-align: center;
+}
+.tab-menu ul {
+    margin: 10px 5px 20px 5px;
+    padding: 0;
+}
+.tab-menu ul li{
+	list-style-type: none;
+	display: inline-block;
+}
+.tab-menu ul li a {
+    border: 1px solid #ccc;
+    background: #f7f7f7!important;
+    margin: 0px 5px;
+    padding: 10px 40px;
+  	font-weight:700;
+  	font-size: 15px;
+}
+.tab-menu ul li a.active-a{
+	background-color: transparent;
+    position: relative;
+    border-radius: 0;
+  	border: 1px solid #ccc;
+}
+.tabbing-content {
+    padding-left: 10px;
+}
+.tab{
+	display: none;
+}
+.tab h2{
+	color: rgba(0,0,0,.7);
+}
+.tab p{
+	color: rgba(0,0,0,0.6);
+	text-align: justify;
+}
+.tab-active{
+	display: block;
+}
+.product-tabbing-section {
+    margin: 30px 0;
+} 
+  
+#shopify-section-16366100164666499a .custom__image {
+    position: relative!important;
+}
+
+.tab-container.page-width {
+    box-shadow: 0px 1px 6px 2px;
+}
+
+  div#shopify-section-size-guide .Table__Text h2 {
+    font-size: 20px;
+}
+
+div#shopify-section-size-guide .text {
+    padding: 45px 0px;
+}
+
+div#shopify-section-size-guide .text li {
+    padding: 12px 0px;
+}
+  
+div#shopify-section-size-guide .main-heading {
+    background: #2d4268;
+    border-radius: 50px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+div#shopify-section-size-guide .main-heading h2 {
+    color: #fff!important;
+    padding: 0px 10px;
+}
+#shopify-section-size-guide .custom__image {
+    position: relative!important;
+}
+div#shopify-section-size-guide .size-guide-content {
+    padding: 10px 0px;
+    border-bottom: 2px solid #254858;
+}
+
+  div#shopify-section-size-guide .size-guide-content p {
+    margin: 0px 0px 9px 0px;
+}
+
+div#shopify-section-size-guide .tabbing-content img {
+    width: 100%;
+}
+div#shopify-section-size-guide .size-guide-content strong {
+    color: #266795;
+}
+
+div#shopify-section-size-guide .tabbing-content img {
+    width: 90%;
+}
+div#shopify-section-size-guide .img-sec {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+  @media only screen and (max-width: 827px){
+  	
+    .tab-menu{
+    
+    	text-align: center;
+    }
+    
+    .tab-menu ul li{
+    
+      	margin: 20px 0px;
+    }
+  }
+</style>
+
+{% schema %}
+   {
+    "name": "Size-guide",
+    "settings": [
+		{
+          "type": "text",
+          "id": "tab1_heading",
+          "label": "Heading",
+          "default": "Quick links"
+        },
+		{
+          "type": "text",
+          "id": "tab2_heading",
+          "label": "Heading",
+          "default": "Quick links"
+        },
+  		
+  			{
+          "type": "text",
+          "id": "tab3_heading",
+          "label": "Heading",
+          "default": "Quick links"
+        },
+  
+  		{
+          "type": "text",
+          "id": "tab4_heading",
+          "label": "Heading",
+          "default": "Quick links"
+        },
+  
+  		{
+  		  "type": "image_picker",
+  		  "id": "image4",
+  		  "label": "Image-heading"
+  		},
+
+		{
+		  "type": "text",
+		  "id": "heading1",
+		  "label": "Main heading"
+		},
+
+		{
+		  "type": "richtext",
+		  "id": "heading2",
+		  "label": "paragraph"
+		},
+		
+		{
+		  "type": "richtext",
+		  "id": "heading3",
+		  "label": "paragraph"
+		},
+
+		{
+		  "type": "richtext",
+		  "id": "heading4",
+		  "label": "paragraph"
+		},
+
+		{
+		  "type": "richtext",
+		  "id": "heading5",
+		  "label": "paragraph"
+		},
+
+		{
+		  "type": "richtext",
+		  "id": "heading6",
+		  "label": "paragraph"
+		}
+	],
+	"presets": [
+	  {
+		"name": "Size-guide",
+		"category": "Customize"
+	  }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

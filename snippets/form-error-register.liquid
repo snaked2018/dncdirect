@@ -1,0 +1,18 @@
+<div class="form-error-register">
+  {{ form.errors | default_errors }}
+  <a href="/">Back to home</a>
+  <a href="/pages/account-register">Register</a>
+</div>
+
+<style>
+  .form-error-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 100px 0;
+  }
+  .form-error-register a {
+    text-decoration: underline;
+  }
+</style>

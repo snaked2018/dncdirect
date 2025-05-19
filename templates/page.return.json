@@ -1,0 +1,89 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {}
+    },
+    "b754a0c3-05bb-412a-9459-04550d950ee3": {
+      "type": "promotion-list",
+      "blocks": {
+        "template--21610785898770__b754a0c3-05bb-412a-9459-04550d950ee3-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/bi1.png",
+            "show_overlay": true,
+            "overlay_opacity": 100,
+            "stretch_image": true,
+            "background": "#161d45",
+            "text_color": "#f3f5f6",
+            "title": "STEP 1",
+            "content": "<p><strong>Go to the Returns portal and enter your order number and email address. Enter a few simple details. </strong></p><p><strong>Once submitted, you’ll be emailed your unique barcode</strong></p>",
+            "content_position": "top_center",
+            "button_background": "#ffbd00",
+            "button_text_color": "#161d45",
+            "button_text": "Returns Portal",
+            "button_link": "https://return.auspost.com.au/WORKSTITCH"
+          }
+        },
+        "template--21610785898770__b754a0c3-05bb-412a-9459-04550d950ee3-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/bs2.png",
+            "show_overlay": true,
+            "overlay_opacity": 100,
+            "stretch_image": true,
+            "background": "#162745",
+            "text_color": "#f3f5f6",
+            "title": "STEP 2",
+            "content": "<h6><strong>Choose to drop your return at any Post Office. Don't worry, you don't even need to print off the label. Just show your barcode and they'll do the rest. </strong></h6><h6><strong>You can print off the label at home and drop your return at  Post Office, Street Post Box, or selected retailers including supermarkets and pharmacies</strong></h6>",
+            "content_position": "top_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#fc2a68",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "template--21610785898770__b754a0c3-05bb-412a-9459-04550d950ee3-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/bs3.png",
+            "show_overlay": true,
+            "overlay_opacity": 100,
+            "stretch_image": true,
+            "background": "#e1e3e4",
+            "text_color": "#f3f5f6",
+            "title": "STEP 3",
+            "content": "<p><strong>You’ll be emailed tracking details so you can check on the progress of your return back to our warehouse. </strong></p>",
+            "content_position": "top_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#26c1ce",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21610785898770__b754a0c3-05bb-412a-9459-04550d950ee3-item-1",
+        "template--21610785898770__b754a0c3-05bb-412a-9459-04550d950ee3-item-2",
+        "template--21610785898770__b754a0c3-05bb-412a-9459-04550d950ee3-item-3"
+      ],
+      "custom_css": [],
+      "settings": {
+        "expand_items": false,
+        "section_size": "medium",
+        "stack_mobile": true
+      }
+    }
+  },
+  "order": ["main", "b754a0c3-05bb-412a-9459-04550d950ee3"]
+}
