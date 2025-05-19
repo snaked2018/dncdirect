@@ -60,7 +60,7 @@
         "description": {
           "type": "description",
           "settings": {
-            "display_mode": "collapse"
+            "display_mode": "show_all"
           }
         },
         "complementary_products_htVKXV": {
