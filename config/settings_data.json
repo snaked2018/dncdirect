@@ -1082,6 +1082,7 @@
           },
           "question_Y8GFdy": {
             "type": "question",
+            "disabled": true,
             "settings": {
               "title": "Any question?",
               "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
