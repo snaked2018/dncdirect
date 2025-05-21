@@ -1,2 +1,5 @@
-{% layout none %}
-{% render 'mini-cart' %}
+{% section 'cart-template' %}
+
+{%- if cart.item_count > 0 -%}
+  {% section 'static-recently-viewed-products' %}
+{%- endif -%}
