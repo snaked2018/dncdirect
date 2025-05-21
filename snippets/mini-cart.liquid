@@ -42,21 +42,19 @@
         <div class="mini-cart__line-item-list">
           {%- for line_item in cart.items -%}
             <div class="mini-cart__line-item">
-              {%- if line_item.image != blank -%}
-                <div class="mini-cart__image-wrapper">
-                  {%- comment -%}For vertical images we force to contain them on a square ratio to avoid growing too large{%- endcomment -%}
+              <div class="mini-cart__image-wrapper">
+                {%- comment -%}For vertical images we force to contain them on a square ratio to avoid growing too large{%- endcomment -%}
 
-                  {%- if line_item.image.aspect_ratio < 1 -%}
-                    <div class="aspect-ratio aspect-ratio--square">
-                      {{- line_item.image | image_url: width: line_item.image.width | image_tag: loading: 'lazy', sizes: '180px', widths: '180,360' -}}
-                    </div>
-                  {%- else -%}
-                    <div class="aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: line_item.image.aspect_ratio }}%">
-                      {{- line_item.image | image_url: width: line_item.image.width | image_tag: loading: 'lazy', sizes: '180px', widths: '180,360' -}}
-                    </div>
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
+                {%- if line_item.image.aspect_ratio < 1 -%}
+                  <div class="aspect-ratio aspect-ratio--square">
+                    <img src="{{ line_item.image | img_url: '180x' }}" alt="{{ line_item.image.alt | escape }}">
+                  </div>
+                {%- else -%}
+                  <div class="aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: line_item.image.aspect_ratio }}%">
+                    <img src="{{ line_item.image | img_url: '180x' }}" alt="{{ line_item.image.alt | escape }}">
+                  </div>
+                {%- endif -%}
+              </div>
 
               <div class="mini-cart__item-wrapper">
                 <div class="mini-cart__product-info">
@@ -100,7 +98,7 @@
                       {%- if line_item.final_price == 0 -%}
                         <span class="price price--highlight">{{ 'cart.general.free' | t }}</span>
                       {%- else -%}
-                        <span class="price price--highlight">{{ line_item.final_line_price | money }}</span>
+                        <span class="price price--highlight">{{ line_item.final_price | money }}</span>
                       {%- endif -%}
 
                       <span class="price price--compare">{{ line_item.original_line_price | money }}</span>
@@ -175,7 +173,7 @@
 
         <div class="mini-cart__recap-price-line">
           <span>{{ 'cart.general.total' | t }}</span>
-          <span>{{ cart.total_price | money_with_currency }}</span>
+          <span>{{ cart.total_price | money }}</span>
         </div>
 
         {%- comment -%}To calculate the total discount, we take both into account the Shopify Script (for Plus merchants), but we also add the compare at price{%- endcomment -%}
@@ -198,7 +196,7 @@
 
         <div class="mini-cart__button-container">
           <div class="button-group button-group--loose button-group--fit">
-            <a href="{{ routes.cart_url }}" class="button button--secondary" data-no-instant>{{ 'cart.general.view_cart' | t }}</a>
+            <a href="{{ routes.cart_url }}" class="button button--secondary">{{ 'cart.general.view_cart' | t }}</a>
             {%- if settings.cart_show_checkout_button -%}
               <button type="submit" name="checkout" class="button button--primary">{{ 'cart.general.checkout' | t }}</button>
             {%- endif -%}
