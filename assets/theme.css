@@ -5454,7 +5454,7 @@ select option {
 
 .search-bar__submit {
   color: #ffffff;
-  background: var(--header-accent-color);
+  background: #ff6700;
   border-radius: 0 3px 3px 0;
   flex: none;
   width: 50px;
