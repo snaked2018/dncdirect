@@ -5234,25 +5234,26 @@ select option {
 }
 
 .header__cart-count {
-  font-size: calc(var(--base-text-font-size)  - (var(--default-text-font-size)  - 12px));
-  font-weight: var(--text-font-bolder-weight);
-  text-align: center;
-  background: #161d45;
-  color: var(--secondary-background);
-  will-change: transform;
-  z-index: 1;
-  border-radius: 1.75em;
-  justify-content: center;
-  align-items: center;
-  min-width: 20px;
-  height: 20px;
-  padding: 4px;
-  transition: transform .35s ease-in-out;
   display: inline-flex;
   position: absolute;
-  top: -7px;
   right: -14px;
+  top: -7px;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  min-width: 20px;
+  padding: 4px;
+  font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 12px));
+  font-weight: var(--text-font-bolder-weight);
+  text-align: center;
+  /* background: var(--header-accent-color); */
+  background: #f8700b;
+  color: var(--secondary-background);
+  border-radius: 1.75em;
+  transition: transform 0.35s ease-in-out;
+  will-change: transform;
   transform: scale(1.01);
+  z-index: 1;
 }
 
 .header__cart-toggle[aria-expanded="true"] .header__cart-count, .header__cart-toggle:hover .header__cart-count {
