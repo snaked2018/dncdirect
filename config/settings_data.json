@@ -807,9 +807,10 @@
           },
           "item_j4GJmC": {
             "type": "item",
+            "disabled": true,
             "settings": {
               "icon": "megaphone",
-              "text": "SPRING SEASON SALE"
+              "text": "WINTER SEASON SALE"
             }
           },
           "item_pn9zUX": {
