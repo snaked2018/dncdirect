@@ -12,6 +12,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "bf_size_charts_block_8Mr4bQ": {
+          "type": "shopify://apps/bf-size-charts/blocks/block/47ee4f2e-eb5e-41af-9beb-e2786646bf2a",
+          "settings": {}
+        },
         "product_meta": {
           "type": "product_meta",
           "settings": {
@@ -20,10 +24,6 @@
             "show_reviews_badge": false,
             "show_share_buttons": false
           }
-        },
-        "bf_size_charts_block_8Mr4bQ": {
-          "type": "shopify://apps/bf-size-charts/blocks/block/47ee4f2e-eb5e-41af-9beb-e2786646bf2a",
-          "settings": {}
         },
         "da0f4f16-7e26-4034-80fa-88e8c9eb654a": {
           "type": "shopify://apps/growave-loyalty-wishlist/blocks/block.product.reviewAvgProfile/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
@@ -73,8 +73,8 @@
         }
       },
       "block_order": [
-        "product_meta",
         "bf_size_charts_block_8Mr4bQ",
+        "product_meta",
         "da0f4f16-7e26-4034-80fa-88e8c9eb654a",
         "text_Ja8VPn",
         "variant_selector",
