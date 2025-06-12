@@ -11,15 +11,6 @@
   "sections": {
     "1749714022b3e52d7a": {
       "type": "apps",
-      "blocks": {
-        "bf_size_charts_block_HwbjM6": {
-          "type": "shopify://apps/bf-size-charts/blocks/block/47ee4f2e-eb5e-41af-9beb-e2786646bf2a",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "bf_size_charts_block_HwbjM6"
-      ],
       "settings": {
         "include_margins": true
       }
