@@ -1,0 +1,179 @@
+{%- assign upsell_handle = settings.upsell_product | handleize -%}
+{%- assign threshold = settings.upsell_price_threshold | default: 0 | times: 100 -%}
+
+{%- assign required_tag_1 = settings.upsell_required_tag_1 | strip -%}
+{%- assign required_tag_2 = settings.upsell_required_tag_2 | strip -%}
+{%- assign required_tag_3 = settings.upsell_required_tag_3 | strip -%}
+{%- assign required_tag_4 = settings.upsell_required_tag_4 | strip -%}
+{%- assign required_tag_5 = settings.upsell_required_tag_5 | strip -%}
+
+{%- assign has_required_tag = false -%}
+{%- assign matched_items_total = 0 -%}
+{%- if required_tag_1 == blank and required_tag_2 == blank and required_tag_3 == blank and required_tag_4 == blank and
+required_tag_5 == blank -%}
+{%- assign has_required_tag = true -%}
+{%- assign matched_items_total = cart.total_price -%}
+{%- else -%}
+{%- for item in cart.items -%}
+{%- assign matched = false -%}
+{%- if required_tag_1 != blank and item.product.tags contains required_tag_1 -%}
+{%- assign matched = true -%}
+{%- endif -%}
+{%- if required_tag_2 != blank and item.product.tags contains required_tag_2 -%}
+{%- assign matched = true -%}
+{%- endif -%}
+{%- if required_tag_3 != blank and item.product.tags contains required_tag_3 -%}
+{%- assign matched = true -%}
+{%- endif -%}
+{%- if required_tag_4 != blank and item.product.tags contains required_tag_4 -%}
+{%- assign matched = true -%}
+{%- endif -%}
+{%- if required_tag_5 != blank and item.product.tags contains required_tag_5 -%}
+{%- assign matched = true -%}
+{%- endif -%}
+{%- if matched -%}
+{%- assign has_required_tag = true -%}
+{%- assign matched_items_total = matched_items_total | plus: item.final_line_price -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+
+{%- assign upsell_in_cart = false -%}
+{%- for item in cart.items -%}
+{%- if item.product.handle == upsell_handle -%}
+{%- assign upsell_in_cart = true -%}
+{%- endif -%}
+{%- endfor -%}
+
+{%- if settings.enable_upsell and upsell_handle != blank and matched_items_total >= threshold and has_required_tag and
+upsell_in_cart == false -%}
+{%- assign upsell_product = all_products[upsell_handle] -%}
+{%- if upsell_product and upsell_product.available -%}
+<div class="mini-cart__upsell">
+    {%- if settings.upsell_heading != blank -%}
+        <h1>{{ settings.upsell_heading }}</h1>
+    {%- endif -%}
+    {%- if settings.upsell_description != blank -%}
+        <p>{{ settings.upsell_description }}</p>
+    {%- endif -%}
+    <div class="mini-cart__upsell-inner">
+        <div class="mini-cart__upsell-image">
+            <a href="{{ upsell_product.url }}">
+                {%- if upsell_product.featured_image -%}
+                {{ upsell_product.featured_image | image_url: width: 110 | image_tag: loading: 'lazy', sizes: '180px',
+                widths: '110,110' }}
+                {%- else -%}
+                <span class="no-image">No image available</span>
+                {%- endif -%}
+            </a>
+        </div>
+        <div class="mini-cart__upsell-info">
+            <a href="{{ upsell_product.url }}" class="mini-cart__upsell-title text--strong link">{{ upsell_product.title
+                }}</a>
+            <div class="mini-cart__upsell-price">
+                {%- if upsell_product.compare_at_price > upsell_product.price -%}
+                <span class="price price--highlight">{{ upsell_product.price | money }}</span>
+                <span class="price price--compare">{{ upsell_product.compare_at_price | money }}</span>
+                {%- else -%}
+                <span class="price">{{ upsell_product.price | money }}</span>
+                {%- endif -%}
+            </div>
+            <button type="button" class="button button--primary button--small mini-cart__upsell-add"
+                data-variant-id="{{ upsell_product.variants.first.id }}">
+                Claim me!
+            </button>
+        </div>
+    </div>
+</div>
+{%- endif -%}
+{%- endif -%}
+
+{%- assign upsell_handle_2 = settings.upsell_product_2 | handleize -%}
+{%- assign threshold_2 = settings.upsell_price_threshold_2 | default: 0 | times: 100 -%}
+
+{%- assign required_tag_2_1 = settings.upsell_required_tag_2_1 | strip -%}
+{%- assign required_tag_2_2 = settings.upsell_required_tag_2_2 | strip -%}
+{%- assign required_tag_2_3 = settings.upsell_required_tag_2_3 | strip -%}
+{%- assign required_tag_2_4 = settings.upsell_required_tag_2_4 | strip -%}
+{%- assign required_tag_2_5 = settings.upsell_required_tag_2_5 | strip -%}
+
+{%- assign has_required_tag_2 = false -%}
+{%- assign matched_items_total_2 = 0 -%}
+{%- if required_tag_2_1 == blank and required_tag_2_2 == blank and required_tag_2_3 == blank and required_tag_2_4 ==
+blank and required_tag_2_5 == blank -%}
+{%- assign has_required_tag_2 = true -%}
+{%- assign matched_items_total_2 = cart.total_price -%}
+{%- else -%}
+{%- for item in cart.items -%}
+{%- assign matched_2 = false -%}
+{%- if required_tag_2_1 != blank and item.product.tags contains required_tag_2_1 -%}
+{%- assign matched_2 = true -%}
+{%- endif -%}
+{%- if required_tag_2_2 != blank and item.product.tags contains required_tag_2_2 -%}
+{%- assign matched_2 = true -%}
+{%- endif -%}
+{%- if required_tag_2_3 != blank and item.product.tags contains required_tag_2_3 -%}
+{%- assign matched_2 = true -%}
+{%- endif -%}
+{%- if required_tag_2_4 != blank and item.product.tags contains required_tag_2_4 -%}
+{%- assign matched_2 = true -%}
+{%- endif -%}
+{%- if required_tag_2_5 != blank and item.product.tags contains required_tag_2_5 -%}
+{%- assign matched_2 = true -%}
+{%- endif -%}
+{%- if matched_2 -%}
+{%- assign has_required_tag_2 = true -%}
+{%- assign matched_items_total_2 = matched_items_total_2 | plus: item.final_line_price -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+
+{%- assign upsell_in_cart_2 = false -%}
+{%- for item in cart.items -%}
+{%- if item.product.handle == upsell_handle_2 -%}
+{%- assign upsell_in_cart_2 = true -%}
+{%- endif -%}
+{%- endfor -%}
+
+{%- if settings.enable_upsell and upsell_handle_2 != blank and matched_items_total_2 >= threshold_2 and
+has_required_tag_2 and upsell_in_cart_2 == false -%}
+{%- assign upsell_product_2 = all_products[upsell_handle_2] -%}
+{%- if upsell_product_2 and upsell_product_2.available -%}
+<div class="mini-cart__upsell">
+    {%- if settings.upsell_heading_2 != blank -%}
+        <h1>{{ settings.upsell_heading_2 }}</h1>
+    {%- endif -%}
+    {%- if settings.upsell_description_2 != blank -%}
+        <p>{{ settings.upsell_description_2 }}</p>
+    {%- endif -%}
+    <div class="mini-cart__upsell-inner">
+        <div class="mini-cart__upsell-image">
+            <a href="{{ upsell_product_2.url }}">
+                {%- if upsell_product_2.featured_image -%}
+                {{ upsell_product_2.featured_image | image_url: width: 110 | image_tag: loading: 'lazy', sizes: '180px',
+                widths: '110,110' }}
+                {%- else -%}
+                <span class="no-image">No image available</span>
+                {%- endif -%}
+            </a>
+        </div>
+        <div class="mini-cart__upsell-info">
+            <a href="{{ upsell_product_2.url }}" class="mini-cart__upsell-title text--strong link">{{
+                upsell_product_2.title }}</a>
+            <div class="mini-cart__upsell-price">
+                {%- if upsell_product_2.compare_at_price > upsell_product_2.price -%}
+                <span class="price price--highlight">{{ upsell_product_2.price | money }}</span>
+                <span class="price price--compare">{{ upsell_product_2.compare_at_price | money }}</span>
+                {%- else -%}
+                <span class="price">{{ upsell_product_2.price | money }}</span>
+                {%- endif -%}
+            </div>
+            <button type="button" class="button button--primary button--small mini-cart__upsell-add"
+                data-variant-id="{{ upsell_product_2.variants.first.id }}">
+                Claim me!
+            </button>
+        </div>
+    </div>
+</div>
+{%- endif -%}
+{%- endif -%}
