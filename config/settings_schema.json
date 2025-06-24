@@ -540,5 +540,130 @@
         "info": "96 x 96px .png recommended"
       }
     ]
+  },
+  {
+    "name": "Mini Cart Upsell",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_upsell",
+        "label": "Enable upsell",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "First Upsell"
+      },
+      {
+        "type": "product",
+        "id": "upsell_product",
+        "label": "Upsell product"
+      },
+      {
+        "type": "number",
+        "id": "upsell_price_threshold",
+        "label": "Upsell price threshold ($)",
+        "default": 100
+      },
+      {
+        "type": "text",
+        "id": "upsell_heading",
+        "label": "Upsell heading",
+        "default": "Congrats you receive a FREE Winter Beanie🎉"
+      },
+      {
+        "type": "textarea",
+        "id": "upsell_description",
+        "label": "Upsell description",
+        "default": "To claim, click the CLAIM button."
+      },
+      {
+        "type": "text",
+        "id": "upsell_required_tag_1",
+        "label": "Required product tag 1",
+        "info": "Enter a single product tag. Example: pants"
+      },
+      {
+        "type": "text",
+        "id": "upsell_required_tag_2",
+        "label": "Required product tag 2",
+        "info": "Enter a single product tag. Example: shirts"
+      },
+      {
+        "type": "text",
+        "id": "upsell_required_tag_3",
+        "label": "Required product tag 3",
+        "info": "Enter a single product tag. Example: vest"
+      },
+      {
+        "type": "text",
+        "id": "upsell_required_tag_4",
+        "label": "Required product tag 4",
+        "info": "Enter a single product tag."
+      },
+      {
+        "type": "text",
+        "id": "upsell_required_tag_5",
+        "label": "Required product tag 5",
+        "info": "Enter a single product tag."
+      },
+      {
+        "type": "header",
+        "content": "Second Upsell"
+      },
+      {
+        "type": "product",
+        "id": "upsell_product_2",
+        "label": "Upsell product 2"
+      },
+      {
+        "type": "number",
+        "id": "upsell_price_threshold_2",
+        "label": "Upsell price threshold 2 ($)",
+        "default": 200
+      },
+      {
+        "type": "text",
+        "id": "upsell_heading_2",
+        "label": "Upsell heading 2",
+        "default": "Congrats you receive a FREE Gift 2 🎉"
+      },
+      {
+        "type": "textarea",
+        "id": "upsell_description_2",
+        "label": "Upsell description 2",
+        "default": "To claim, click the CLAIM button."
+      },
+      {
+        "type": "text",
+        "id": "upsell_required_tag_2_1",
+        "label": "Required product tag 2-1",
+        "info": "Enter a single product tag. Example: jacket"
+      },
+      {
+        "type": "text",
+        "id": "upsell_required_tag_2_2",
+        "label": "Required product tag 2-2",
+        "info": "Enter a single product tag. Example: coat"
+      },
+      {
+        "type": "text",
+        "id": "upsell_required_tag_2_3",
+        "label": "Required product tag 2-3",
+        "info": "Enter a single product tag. Example: scarf"
+      },
+      {
+        "type": "text",
+        "id": "upsell_required_tag_2_4",
+        "label": "Required product tag 2-4",
+        "info": "Enter a single product tag."
+      },
+      {
+        "type": "text",
+        "id": "upsell_required_tag_2_5",
+        "label": "Required product tag 2-5",
+        "info": "Enter a single product tag."
+      }
+    ]
   }
 ]

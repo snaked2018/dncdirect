@@ -12194,3 +12194,50 @@ shopify-payment-terms {
 #shopify-section-template--23785592193298__main .aspect-ratio {
     width: 335px;
 }
+
+/* Mini cart upsell [Ron] */
+.mini-cart__upsell {
+  background: #1e2d7d;
+  padding: 20px;
+}
+.mini-cart__upsell-inner {
+  display: flex;
+  gap: 15px;
+}
+.mini-cart__upsell-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+a.mini-cart__upsell-title.text--strong.link {
+  font-size: 14px;
+  color: #FFF;
+}
+.mini-cart__upsell-price span {
+  font-size: 14px !important;
+}
+.mini-cart__upsell-add {
+  background: #ff6700;
+  border: 1px solid #ff6700;
+}
+.mini-cart__upsell-add:hover {
+  background: transparent;
+  border: 1px solid #ff6700;
+  color: #ff6700;
+}
+.mini-cart__upsell p {
+  text-align: center;
+  color: #FFF;
+  opacity: .8;
+  line-height: 10px;
+}
+.mini-cart__upsell p:hover {
+  color: #ff6700;
+}
+.mini-cart__upsell h1 {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0
+}

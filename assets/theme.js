@@ -6445,6 +6445,7 @@ var Cart = class {
     this._calculateMiniCartHeightListener = this._calculateMiniCartHeight.bind(this);
     if (window.theme.pageType !== "cart" && window.theme.cartType !== "page") {
       this.delegateElement.on("click", '[data-action="toggle-mini-cart"]', this._toggleMiniCart.bind(this));
+      this.delegateElement.on("click", '.mini-cart__upsell-add', this._onMiniCartUpsellSubmit.bind(this));
       this.delegateElement.on("keyup", this._checkMiniCartClose.bind(this));
       this.delegateRoot.on("click", this._onWindowClick.bind(this));
       window.addEventListener("resize", this._calculateMiniCartHeightListener);
@@ -6457,16 +6458,40 @@ var Cart = class {
     this.delegateRoot.on("product:added", this._onProductAdded.bind(this));
     this.delegateRoot.on("cart:refresh", this._onCartRefresh.bind(this));
   }
-  _toggleMiniCart(event2) {
-    if (event2) {
-      event2.preventDefault();
+  _onMiniCartUpsellSubmit(event, target) {
+    event.preventDefault();
+    const variantId = target.getAttribute("data-variant-id");
+    if (!variantId) {
+      console.warn('No variant ID found on button');
+      return;
     }
-    if (this.isMiniCartOpen) {
-      this._closeMiniCart();
-    } else {
-      this._openMiniCart();
-    }
+    fetch('/cart/add.js', {
+      method: 'POST',
+      body: new URLSearchParams({ id: variantId, quantity: 1 }),
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(response => {
+        console.log('Fetch response:', response);
+        return response.json();
+      })
+      .then(data => {
+        this._onCartRefresh();
+      })
+      .catch(error => {
+        error = new Error(`Failed to add upsell product: ${error.message}`);
+      });
   }
+  _toggleMiniCart(event2) {
+  console.log("Mini-cart toggle fired");
+  if (event2) {
+    event2.preventDefault();
+  }
+  if (this.isMiniCartOpen) {
+    this._closeMiniCart();
+  } else {
+    this._openMiniCart();
+  }
+}
   _openMiniCart() {
     this.miniCartToggleElement.setAttribute("aria-expanded", "true");
     if (Responsive.getCurrentBreakpoint() === "phone") {
