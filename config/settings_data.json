@@ -269,7 +269,6 @@
         "blocks": {
           "slide-0": {
             "type": "image",
-            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/lpwbd_3.gif",
               "mobile_image": "shopify://shop_images/lpwbd_750_x_1100_px_3.gif",
