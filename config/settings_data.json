@@ -303,24 +303,9 @@
               "link": "shopify://products/bata-804-44021-trekker-ultra-slip-on-safety-boot"
             }
           },
-          "image_D377TU": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "show_overlay": false,
-              "overlay_opacity": 30,
-              "text_color": "#ffffff",
-              "title": "Slide title",
-              "content": "Tell your story",
-              "content_position": "middle_center",
-              "button_background": "#ffffff",
-              "button_text_color": "#000000",
-              "button_text": "Button",
-              "link": ""
-            }
-          },
           "image_CJggjn": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/lpdnc_5.png",
               "mobile_image": "shopify://shop_images/lpdnc_750_x_1100_px.png",
@@ -340,7 +325,6 @@
         "block_order": [
           "slide-0",
           "image_tbEaab",
-          "image_D377TU",
           "image_CJggjn"
         ],
         "settings": {
