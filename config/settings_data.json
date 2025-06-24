@@ -1216,11 +1216,23 @@
           "link_title": "",
           "link": ""
         }
+      },
+      "rich_text_RqAKnR": {
+        "type": "rich-text",
+        "name": "Rich text",
+        "settings": {
+          "text_width": "narrow",
+          "title": "Midnight Deadline: FREE Shipping on Everything!",
+          "content": "<p><strong>Hurry – time’s ticking and so is this deal.</strong></p>",
+          "button_text": "Beat the Clock – Shop Now",
+          "button_link": "shopify://collections/all"
+        }
       }
     },
     "content_for_index": [
       "ss_scrolling_announcement_bar_2_GmpNrh",
       "slideshow",
+      "rich_text_RqAKnR",
       "custom_html_Yi6xxD",
       "promotion_list_MG6hen",
       "logo_list_cqYrG7",
