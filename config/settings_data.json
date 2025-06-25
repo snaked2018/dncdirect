@@ -820,7 +820,7 @@
             "type": "item",
             "settings": {
               "icon": "airplane",
-              "text": "AUSTRALIA WIDE FREE SHIPPING - No Minimum Order"
+              "text": "AUSTRALIA WIDE FREE SHIPPING - Orders Over $500.01"
             }
           },
           "item_9b7gJ3": {
@@ -1220,6 +1220,7 @@
       },
       "rich_text_RqAKnR": {
         "type": "rich-text",
+        "disabled": true,
         "name": "Rich text",
         "settings": {
           "text_width": "narrow",
