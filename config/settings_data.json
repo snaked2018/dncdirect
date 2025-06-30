@@ -811,6 +811,7 @@
         "blocks": {
           "item_j4GJmC": {
             "type": "item",
+            "disabled": true,
             "settings": {
               "icon": "megaphone",
               "text": "Spend $150+ on clothing and score a FREE Winter Beanie"
@@ -825,6 +826,7 @@
           },
           "item_9b7gJ3": {
             "type": "item",
+            "disabled": true,
             "settings": {
               "icon": "truck",
               "text": "FREE GRVL Every Day Socks with Every Boot Order Over $199"
