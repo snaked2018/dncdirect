@@ -288,23 +288,6 @@
               "link": "shopify://collections/sale"
             }
           },
-          "image_tbEaab": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/lpwbd_9.png",
-              "mobile_image": "shopify://shop_images/lpwbd_800_x_1100_px_2.png",
-              "show_overlay": true,
-              "overlay_opacity": 0,
-              "text_color": "#ffffff",
-              "title": "",
-              "content": "",
-              "content_position": "bottom_center",
-              "button_background": "#ff6700",
-              "button_text_color": "#ffffff",
-              "button_text": "SHOP NOW",
-              "link": "shopify://products/bata-804-44021-trekker-ultra-slip-on-safety-boot"
-            }
-          },
           "image_CJggjn": {
             "type": "image",
             "settings": {
@@ -321,12 +304,29 @@
               "button_text": "SHOP NOW",
               "link": "shopify://collections/cold-wet-weather"
             }
+          },
+          "image_tbEaab": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/lpwbd_9.png",
+              "mobile_image": "shopify://shop_images/lpwbd_800_x_1100_px_2.png",
+              "show_overlay": true,
+              "overlay_opacity": 0,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "bottom_center",
+              "button_background": "#ff6700",
+              "button_text_color": "#ffffff",
+              "button_text": "SHOP NOW",
+              "link": "shopify://products/bata-804-44021-trekker-ultra-slip-on-safety-boot"
+            }
           }
         },
         "block_order": [
           "slide-0",
-          "image_tbEaab",
-          "image_CJggjn"
+          "image_CJggjn",
+          "image_tbEaab"
         ],
         "settings": {
           "edge_to_edge": true,
