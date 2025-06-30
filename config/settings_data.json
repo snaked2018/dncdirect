@@ -272,6 +272,7 @@
         "blocks": {
           "slide-0": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/lpwbd_3.gif",
               "mobile_image": "shopify://shop_images/lpwbd_750_x_1100_px_3.gif",
@@ -306,7 +307,6 @@
           },
           "image_CJggjn": {
             "type": "image",
-            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/lpdnc_5.png",
               "mobile_image": "shopify://shop_images/lpdnc_750_x_1100_px.png",
@@ -1220,6 +1220,7 @@
       },
       "rich_text_RqAKnR": {
         "type": "rich-text",
+        "disabled": true,
         "name": "Rich text",
         "settings": {
           "text_width": "narrow",
