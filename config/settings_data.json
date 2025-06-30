@@ -69,6 +69,7 @@
     "social_snapchat": "",
     "social_fancy": "",
     "favicon": "shopify://shop_images/Picture1.png",
+    "enable_upsell": false,
     "upsell_product": "hivis-micro-fleece-beanie-h025",
     "upsell_price_threshold": 150,
     "upsell_heading": "Congratulations! Claim your FREE HiVis Beanie",
