@@ -1220,11 +1220,10 @@
       },
       "rich_text_RqAKnR": {
         "type": "rich-text",
-        "disabled": true,
         "name": "Rich text",
         "settings": {
           "text_width": "narrow",
-          "title": "Midnight Deadline: FREE Shipping on Everything!",
+          "title": "Midnight Deadline: EOFY Final hours!",
           "content": "<p><strong>Hurry – time’s ticking and so is this deal.</strong></p>",
           "button_text": "Beat the Clock – Shop Now",
           "button_link": "shopify://collections/all"
